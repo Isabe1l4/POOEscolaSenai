@@ -1,5 +1,8 @@
 package com.poo.exercicios.trabalhospoo.EscolaSenai;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Alunos extends Pessoas {
 
     private int matricula;
@@ -39,5 +42,6 @@ public class Alunos extends Pessoas {
 
     //métodos especificos -> fazem atividades, fazem provas, possuem um intervalo e levam 
     //atividades pra casa
+
 
 }

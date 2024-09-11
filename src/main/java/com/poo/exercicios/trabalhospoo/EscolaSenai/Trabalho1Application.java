@@ -1,18 +1,7 @@
 package com.poo.exercicios.trabalhospoo.EscolaSenai;
 
-/*Nós vamos começar a estruturar um projeto que é o EscolaSenai.
-Nós precisamos montar um sistema para gerenciar as atividades
-pedagógicas para alunos e professores. 
-*Primeira Entrega;
-*Critérios;
-*Estruturar o projeto com suas classes, relacionamentos, heranças e tudo que o sistema 
-necessite baseado no que voces aprenderam;
-*Classes (Alunos, Professores, Disciplinas e Notas) Se precisar de outras 
-para estruturar melhor, fiquem a vontade;
-*Utilizar Herança (Ex: Pessoa);
-*Montar construtores contendo as regras do negócio;
-*Montar todos os relacionamentos entre classes.
-*brmodelo*/
+import java.util.ArrayList;
+import java.util.Scanner;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,26 +9,88 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.poo.exercicios.trabalhospoo.EscolaSenai.Disciplina;
 
 @SpringBootApplication
-public class Trabalho1Application {
+public class Trabalho1Application{
+    public static void main(String[] args){
+    
+            int opcao;
+            do {
+                
+                System.out.print("--------------------------------");
+                System.out.print("\n- SEJA BEM VINDO(A) AO MENU -");
+                System.out.print("--------------------------------\n");
+                System.out.println("\nO que deseja fazer?");
+                System.out.println("1- Cadastrar novo aluno");
+                System.out.println("2- Deletar aluno");
+                System.out.println("3- Listar alunos");
+                System.out.println("0- Sair\n");
+                System.out.print("Digite uma opção: ");
 
-	public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
 
-		//dados e atributos aqui
+                opcao = sc.nextInt();
 
-		Professores professor1 = new Professores("Arthur", 1, "01/01/1995", "rua123", "242212345678", 0);
-		Diretores diretor1 = new Diretores("Luiza", 1, "01/01/1995", "rua321", "242212345689");
-		Alunos aluno1 = new Alunos("Isabella", 1, "01/01/2017", "rua537", "242212345658", 2, "Lucia", "Marcelo");
-		Alunos aluno2 = new Alunos("João", 2, "02/02/2017", "rua752", "24224561387", 3, "Cristina", "Aurélio");
-		Disciplina disciplina = Disciplina.MATEMATICA;
-		Status status = Status.APROVADO;
+                System.out.println("\n");
+    
+                int i;
+                Scanner leia = new Scanner(System.in);
+                ArrayList<String> novoAluno = new ArrayList();
 
-		System.out.println("ID: "+aluno1.getId()+". Aluno: "+aluno1.getNome()+". Disciplina: "+disciplina.getDescricao()+
-		". O(A) aluno(a) em questão está: "+status.getDescricao2());
-		
-	}
+                switch(opcao){
+                    case 1:
+                        //Cadastrar aluno
+                        String nomeAluno;
 
+                        System.out.println("Digite o nome do(a) aluno(a) que deseja matricular: ");
+                        nomeAluno = leia.nextLine();
+                        novoAluno.add(nomeAluno);
+                    
+                        for (i = 0; i < novoAluno.size(); i++) {
+                            System.out.println("O aluno "+novoAluno+" foi cadastrado.");
+                        }
+                    
+                    break;
 
-		
+                    case 2:
+                        // Deletar aluno
+                        System.out.printf("\nInforme o(a) aluno(a) a ser excluído(a):\n");
+                            
+                        i = leia.nextInt();
+
+                        try {
+                        novoAluno.remove(i);
+                        System.out.printf("Aluno "+i+" foi removido.");
+
+                        } catch (IndexOutOfBoundsException e) {
+                        // exceção lançada para indicar que um índice (i)
+                        // está fora do intervalo válido
+                        System.out.printf("\nErro: aluno inválido (%s).",
+                            e.getMessage());
+                            }
+
+                    break;
+
+                    case 3:
+                        System.out.printf("\nPercorrendo o ArrayList\n");
+
+                        i = 0;
+
+                        for (String matricula: novoAluno) {
+                        System.out.printf("Aluno %d- %s\n", i, matricula);
+                        i++;
+                        }
+
+                    break;
+
+                    case 0:
+                        System.out.println("Saindo...");
+                        break;
+
+                    default:
+                        System.out.println("Opção inválida");
+                        break;
+                        
+                }
+                
+            }while(opcao != 0);
+    }
 }
-
-

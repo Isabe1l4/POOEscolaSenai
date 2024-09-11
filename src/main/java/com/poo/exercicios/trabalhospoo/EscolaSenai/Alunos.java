@@ -6,8 +6,8 @@ public class Alunos extends Pessoas {
     private String nomeMae;
     private String nomePai;
 
-    public Alunos(int id, String nome, int cpf, String dataNascimento, String endereco, String telefone, int matricula, String nomeMae, String nomePai) {
-        super(id, nome, cpf, dataNascimento, endereco, telefone);
+    public Alunos(String nome, int cpf, String dataNascimento, String endereco, String telefone, int matricula, String nomeMae, String nomePai) {
+        super(nome, cpf, dataNascimento, endereco, telefone);
 
         this.nomeMae = nomeMae;
         this.nomePai = nomePai;

@@ -3,8 +3,8 @@ package com.poo.exercicios.trabalhospoo.EscolaSenai;
 public class Diretores extends Pessoas{
     //salarioHora
 
-    public Diretores(int id, String nome, int cpf, String dataNascimento, String endereco, String telefone) {
-        super(id, nome, cpf, dataNascimento, endereco, telefone);
+    public Diretores(String nome, int cpf, String dataNascimento, String endereco, String telefone) {
+        super(nome, cpf, dataNascimento, endereco, telefone);
 
     }
 

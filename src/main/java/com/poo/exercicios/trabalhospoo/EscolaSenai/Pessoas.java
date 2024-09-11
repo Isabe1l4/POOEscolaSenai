@@ -11,9 +11,12 @@ public abstract class Pessoas {
     private String endereco;
     private String telefone;
 
+    private static int contadorId=1;
+
    //construtor -> recebe novas informações no Application
-   public Pessoas(int id, String nome, int cpf, String dataNascimento, String endereco, String telefone){
-    this.id = id;
+   public Pessoas(String nome, int cpf, String dataNascimento, String endereco, String telefone){
+    this.id = contadorId;
+    contadorId++;
     this.nome = nome;
     this.cpf = cpf;
     this.dataNascimento = dataNascimento;

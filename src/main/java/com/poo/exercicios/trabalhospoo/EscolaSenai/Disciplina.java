@@ -1,23 +1,33 @@
 package com.poo.exercicios.trabalhospoo.EscolaSenai;
 
-public class Disciplina extends Notas {
     /*double media;
     media = (atividades+trabalhos+provas)/2;*/
-    private String nome;
 
-    public Disciplina(Professores professores, Alunos alunos, int atividades, int trabalhos, int provas, String nome) {
-        super(professores, alunos, atividades, trabalhos, provas);
+    public enum Disciplina{
+        MATEMATICA("Matemática"), CIENCIAS("Ciências"), GEOGRAFIA("Geografia"), 
+        HISTORIA("História"), BIOLOGIA("Biologia"), PORTUGUES("Português"), 
+        ARTES("Artes"), FILOSOFIA("Filosofia"), SOCIOLOGIA("Sociologia"), 
+        INGLES("Inglês"), FISICA("Física"), QUIMICA("Química"), 
+        EDUCACAOFISICA("EducaçãoFísica");
 
-        this.nome = nome;
+        private final String descricao;
+
+        Disciplina(String descricao){
+            this.descricao = descricao;
+          
+        }
+        
+        public String getDescricao(){
+                return descricao;
+        }
+
+        
     }
 
-    public String getNome() {
-        return nome;
-    }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
     
+
     
-}
+
+
+

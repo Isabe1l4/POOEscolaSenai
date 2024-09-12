@@ -2,14 +2,14 @@ package com.poo.exercicios.trabalhospoo.EscolaSenai;
 
 public class Notas {
     private Professores professores;
-    private Alunos alunos;
+    private Aluno aluno;
     private int atividades;
     private int trabalhos;
     private int provas;
 
-    public Notas(Professores professores, Alunos alunos, int atividades, int trabalhos, int provas){
+    public Notas(Professores professores, Aluno aluno, int atividades, int trabalhos, int provas){
         this.professores = professores;
-        this.alunos = alunos;
+        this.aluno = aluno;
         this.atividades = atividades;
         this.trabalhos = trabalhos;
         this.provas = provas;
@@ -24,12 +24,12 @@ public class Notas {
         this.professores = professores;
     }
 
-    public Alunos getAlunos() {
-        return alunos;
+    public Aluno getAluno() {
+        return aluno;
     }
 
-    public void setAlunos(Alunos alunos) {
-        this.alunos = alunos;
+    public void setAlunos(Aluno aluno) {
+        this.aluno = aluno;
     }
 
     public int getAtividades() {

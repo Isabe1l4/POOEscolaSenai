@@ -1,6 +1,6 @@
 package com.poo.exercicios.trabalhospoo.EscolaSenai;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public abstract class Pessoas {
     //atributos -> são privados
@@ -24,6 +24,7 @@ public abstract class Pessoas {
     this.telefone = telefone;
 
    }
+   public Pessoas(){}
     
    //métodos especificos -> comparecer à escola, ter intervalo e ir embora
    

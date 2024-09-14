@@ -5,13 +5,20 @@ import java.util.Scanner;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 //import com.poo.exercicios.trabalhospoo.EscolaSenai.Disciplina;
 
 @SpringBootApplication
 public class Trabalho1Application{
     public static void main(String[] args){
-    
+               
+        Aluno.preCarregarAlunos();
         int opcao;
+        //professor lançar nota
+        //aluno ver nota
+        //login
+        //criar menus
+
         do {
             
             System.out.print("--------------------------------");

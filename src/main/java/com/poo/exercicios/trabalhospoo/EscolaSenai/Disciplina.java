@@ -1,31 +1,41 @@
 package com.poo.exercicios.trabalhospoo.EscolaSenai;
 
-    /*double media;
-    media = (atividades+trabalhos+provas)/2;*/
-
-    public enum Disciplina{
-        MATEMATICA("Matemática"), CIENCIAS("Ciências"), GEOGRAFIA("Geografia"), 
-        HISTORIA("História"), BIOLOGIA("Biologia"), PORTUGUES("Português"), 
-        ARTES("Artes"), FILOSOFIA("Filosofia"), SOCIOLOGIA("Sociologia"), 
-        INGLES("Inglês"), FISICA("Física"), QUIMICA("Química"), 
-        EDUCACAOFISICA("EducaçãoFísica");
-
-        private final String descricao;
-
-        Disciplina(String descricao){
-            this.descricao = descricao;
-          
-        }
-        
-        public String getDescricao(){
-                return descricao;
-        }
-
-        
+public class Disciplina{
+    private String nomeDisciplina;
+    private Nota nota;
+    private Professor professor;
+    
+    
+    public Disciplina(String nomeDisciplina, Nota nota, Professor professor) {
+        this.nomeDisciplina = nomeDisciplina;
+        this.nota = nota;
+        this.professor = professor;
     }
 
 
-    
+    public String getNomeDisciplina() {
+        return nomeDisciplina;
+    }
+    public void setNomeDisciplina(String nomeDisciplina){
+        this.nomeDisciplina = nomeDisciplina;
+    }        
+    public Nota getNota() {
+        return nota;
+    }
+    public void setNota(Nota nota){
+        this.nota = nota;
+    }
+    public Professor getProfessor() {
+        return professor;
+    }
+    public void setProfessor(Professor professor){
+        this.professor = professor;
+    } 
+
+}
+
+
+
 
     
 
